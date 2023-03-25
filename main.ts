@@ -1,5 +1,13 @@
 let myHeader = document.getElementById('JSUketoreyo')! as HTMLElement;
 let scrolldown = document.getElementById('scrolldown_animation')! as HTMLElement;
+let mordal = [document.getElementById('mordalback')!, document.getElementById('mordalback')!];
+let mordalpage = ['', '']
+
+// x-0y-0様
+mordalpage[0] = '';
+
+// fhruby
+mordalpage[1] = '<h2>FhRuby</h2>';
 
 window.addEventListener('scroll', function() {
     if (window.pageYOffset === 0) {
@@ -10,3 +18,22 @@ window.addEventListener('scroll', function() {
         scrolldown.classList.add('hideSA');
     }
 });
+
+function mordalWindowShow(inside: 'x-0y-0' | "fhruby") {
+    switch(inside) {
+        case 'x-0y-0':
+            mordal[1].innerHTML = mordalpage[0];
+            break;
+        case 'fhruby':
+            mordal[1].innerHTML = mordalpage[1];
+            break;
+        default:
+            break;
+    }
+    mordal[0].classList.remove('hideMD');
+    return;
+}
+
+function removeNowMordal() {
+    mordal[0].classList.add('hideMD');
+}
