@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home | Vanilla Cook Lab</title>
+    <meta name="description">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header id="JSUketoreyo" class="madaTop">
+        <a href="#works">Works</a>
+        <a href="#members">Members</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </header>
+    <section id="headTop">
+        <h1>Vanilla Cook Lab<span style="font-size: 1rem;color: gainsboro;"><br>※アイス屋ではありません</span></h1>
+        <div class="scrolldown" id="scrolldown_animation"><span>Scroll</span></div>
+        <div id="works"></div>
+    </section>
+    <div id="members"></div>
+    <section id="ourWorks" data-aos="fade-up">
+        <h2>Works</h2>
+        <p style="text-align: center;font-size: 2rem;" data-aos-delay="100" data-aos="fade-right">今、スタートラインに立ったばかりです。<br>これから活動を始めます！</p>
+    </section>
+    <section id="ourMember" data-aos="fade-up">
+        <h2>Member</h2>
+        <div class="memberFlex">
+            <div class="memberBox" data-aos-delay="200" data-aos="fade-right">
+                <div class="memberBoxFlex">
+                    <div class="icon">
+                        <div class="mainIcon" style="background-image: url(./images/x0y0_icon.png);"></div>
+                    </div>
+                    <div class="name">x-0y-0<span><br>Institute Director</span></div>
+                </div>
+                <div class="social"><a href="https://github.com/x-0y-0" target="_blank" rel="noopener"><span class="sc github"></span></a><a href="https://www.youtube.com/@x-0y-0" target="_blank" rel="noopener"><span class="sc youtube"></span></a><a href="https://discord.gg/8dj3XX4Dyx"
+                        target="_blank" rel="noopener"><span class="sc discord"></span></a></div>
+                <div class="skills"><span class="sk javascript lv3"></span><span class="sk python lv3"></span></div>
+            </div>
+            <div class="memberBox" data-aos-delay="400" data-aos="fade-right">
+                <div class="memberBoxFlex">
+                    <div class="icon">
+                        <div class="mainIcon" style="background-image: url(./images/fhruby_icon.jpg);"></div>
+                    </div>
+                    <div class="name">FhRuby<span><br>Beginner Developer</span></div>
+                </div>
+                <div class="social"><a href="https://note.com/fhruby" target="_blank" rel="noopener"><span class="sc note"></span></a><a href="https://github.com/forestrharumaki" target="_blank" rel="noopener"><span class="sc github"></span></a><a href="https://misskey.io/@fhruby"
+                        target="_blank" rel="noopener"><span class="sc misskey"></span></a></div>
+                <div class="skills"><span class="sk typescript lv3"></span><span class="sk javascript lv3"></span><span class="sk cpp lv3"></span><span class="sk cs lv2"></span><span class="sk python lv1"></span></div>
+            </div>
+            <div id="about"></div>
+        </div>
+        <p style="text-align: center;">Icons from https://icon-icons.com/ja/</p>
+    </section>
+    <section id="aboutUs" data-aos="fade-up">
+        <h2>About</h2>
+        <p style="padding: 50px;font-size: 1.7rem;text-align: center;" data-aos-delay="100" data-aos="fade-right">
+            2023年の春に発足したプログラミンググループ。
+            <br> 名前を決めるのにかなり時間がかかったという伝説がある、
+            <br> 結局、全て融合した名前になったが()
+            <br>新メンバーは募集したいのですが、
+            <br>全員現実にゆとりがないのでお許しください...
+            <br>...ところでこのサイトに一日を引き裂きました()
+        </p>
+        <div id="contact"></div>
+    </section>
+    <section id="contactUsForm" data-aos="fade-up">
+        <h2>Contact</h2>
+        <iframe data-aos-delay="100" data-aos="fade-right" src="https://docs.google.com/forms/d/e/1FAIpQLScNu92mJoU6n5XD-rsa_6CNSrm3yk1B3BPjFnMgvNuEa4tlBw/viewform?embedded=true" width="100%" height="500px" frameborder="0" marginheight="0" marginwidth="0" style="width: 100%;height: 500px;">読み込んでいます…</iframe>
+    </section>
+    <footer style="position: relative;">
+        <div style="padding-top: 2vh;"></div>
+        <div style="width: 50%;border-radius: 999px;margin: 0 25%;display: flex;justify-content: space-evenly;background-color: white;"><a href="https://github.com/VanillaCookLab" target="_blank" rel="noopener"><span class="sc github"></span></a></div>
+        <div style="padding-top: 1vh;"></div>
+        <p style="text-align: center;color: white;position: absolute;bottom: 1vh;width: 100%;"><small>Copyright (C) 2023-2023 VanillaCookLab All right reserved.</small></p>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="./main.js" defer async></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

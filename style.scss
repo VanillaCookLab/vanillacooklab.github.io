@@ -1,0 +1,267 @@
+$themecolor: rgb(230, 158, 63);
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    margin: 0;
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    padding-top: 25vh;
+}
+
+h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+header {
+    width: 100%;
+    height: 7vh;
+    background-color: black;
+    backdrop-filter: blur(6px);
+    opacity: .5;
+    position: fixed;
+    z-index: 9999999999;
+    display: flex;
+    top: 0;
+    transition: ease-out .5s;
+    justify-content: space-evenly;
+    align-items: center;
+    &.madaTop {
+        background-color: $themecolor;
+        height: 12vh;
+        position: initial;
+        opacity: 1;
+        a {
+            height: 50%;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: white;
+        font-size: 3rem;
+        transition: .5s;
+        height: 100%;
+        padding: 0 3%;
+    }
+    a:hover {
+        background-color: gray;
+    }
+}
+
+#headTop {
+    background-color: $themecolor;
+    width: 100%;
+    height: 100vh;
+}
+
+#ourWorks {
+    width: 100%;
+}
+
+#ourMember {
+    padding: 3vh 0;
+    width: 100%;
+    background-color: #f8f8f8;
+    .memberFlex {
+        display: flex;
+        justify-content: center;
+        .memberBox {
+            width: 400px;
+            height: 400px;
+            .memberBoxFlex {
+                display: flex;
+                width: 100%;
+                height: 160px;
+                .icon {
+                    width: 40%;
+                    height: 100%;
+                    .mainIcon {
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        border-radius: 9999px;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+                .name {
+                    padding-top: 10%;
+                    width: 60%;
+                    height: 100%;
+                    padding-left: 10px;
+                    font-size: 3.7rem;
+                    span {
+                        font-size: 1.5rem;
+                        color: gray;
+                        vertical-align: text-top;
+                    }
+                }
+            }
+            .social {
+                width: 100%;
+                height: 70px;
+                display: flex;
+            }
+            .skills {
+                width: 100%;
+                height: 170px;
+                display: flex;
+            }
+        }
+    }
+}
+
+#contactUsForm {
+    padding: 3vh 0;
+    background-color: #f8f8f8;
+}
+
+footer {
+    background-color: $themecolor;
+    height: 15vh;
+}
+
+span.sc {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: white;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    border-radius: 5px;
+    &.note {
+        background-image: url(./socials/note_square.png);
+    }
+    &.github {
+        background-image: url(./socials/github_github-mark.png);
+    }
+    &.misskey {
+        background-image: url(./socials/misskey_icon.png);
+    }
+    &.youtube {
+        background-image: url(./socials/YouTube_23392.png);
+    }
+    &.discord {
+        background-image: url(./socials/discord_icon_130958.png);
+    }
+    transition: .1s;
+    border: 3px solid transparent;
+}
+
+span.sk {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    border-radius: 5px;
+    &.typescript {
+        background-image: url(./skill/typescript_plain_logo.png);
+    }
+    &.javascript {
+        background-image: url(./skill/file_type_js_official_icon_130509.png);
+    }
+    &.python {
+        background-image: url(./skill/python_18894.png);
+    }
+    &.cs {
+        background-image: url(./skill/c_sharp_icon_213045.png);
+    }
+    &.cpp {
+        background-image: url(./skill/c_icon_132529.png);
+    }
+}
+
+.lv3 {
+    border: 3px solid rgb(0, 162, 255);
+}
+
+.lv2 {
+    border: 3px solid rgb(0, 125, 134);
+}
+
+.lv1 {
+    border: 3px solid rgb(0, 49, 53);
+}
+
+span.sc:hover {
+    border: 3px solid red;
+}
+
+a {
+    display: flex;
+}
+
+#scrolldown_animation.scrolldown {
+    transition: .5s;
+    &.hideSA {
+        opacity: 0;
+    }
+}
+
+
+/* https://web-navigator.blog/scrolldown/ */
+
+.scrolldown {
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    /*全体の高さ*/
+    height: 150px;
+    /*Scrollテキストの描写*/
+    span {
+        /*描画位置*/
+        position: absolute;
+        left: -25px;
+        top: -30px;
+        /*テキストの形状*/
+        color: #eee;
+        font-size: 1.2rem;
+        letter-spacing: 0.05em;
+    }
+    /* 線の描写 */
+    &::after {
+        content: "";
+        /*描画位置*/
+        position: absolute;
+        top: 0;
+        /*線の形状*/
+        width: 1px;
+        height: 50px;
+        background: #eee;
+        /*線の動き1.4秒かけて動く。永遠にループ*/
+        animation: pathmove 1s ease-in-out infinite;
+        opacity: 0;
+    }
+}
+
+
+/*高さ・位置・透過が変化して線が上から下に動く*/
+
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 0;
+        opacity: 0;
+    }
+    30% {
+        height: 70px;
+        opacity: 1;
+    }
+    100% {
+        height: 0;
+        top: 100px;
+        opacity: 0;
+    }
+}
