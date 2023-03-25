@@ -1,6 +1,8 @@
 let myHeader = document.getElementById('JSUketoreyo')! as HTMLElement;
 let scrolldown = document.getElementById('scrolldown_animation')! as HTMLElement;
-let mordal = [document.getElementById('mordalback')!, document.getElementById('mordalback')!];
+let mordal = [document.getElementById('mordalback')!, document.getElementById('mordalmain')!];
+mordal[0].style.display = 'none';
+mordal[1].style.display = 'none';
 let mordalpage = ['', '']
 
 // x-0y-0様
@@ -20,6 +22,8 @@ window.addEventListener('scroll', function() {
 });
 
 function mordalWindowShow(inside: 'x-0y-0' | "fhruby") {
+    mordal[0].style.display = 'block';
+    mordal[1].style.display = 'block';
     switch(inside) {
         case 'x-0y-0':
             mordal[1].innerHTML = mordalpage[0];
@@ -36,4 +40,8 @@ function mordalWindowShow(inside: 'x-0y-0' | "fhruby") {
 
 function removeNowMordal() {
     mordal[0].classList.add('hideMD');
+    setTimeout(function() {
+        mordal[0].style.display = 'none';
+        mordal[1].style.display = 'none';
+    }, 500)
 }

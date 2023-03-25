@@ -1,6 +1,8 @@
 var myHeader = document.getElementById('JSUketoreyo');
 var scrolldown = document.getElementById('scrolldown_animation');
-var mordal = [document.getElementById('mordalback'), document.getElementById('mordalback')];
+var mordal = [document.getElementById('mordalback'), document.getElementById('mordalmain')];
+mordal[0].style.display = 'none';
+mordal[1].style.display = 'none';
 var mordalpage = ['', ''];
 // x-0y-0様
 mordalpage[0] = '';
@@ -17,6 +19,8 @@ window.addEventListener('scroll', function () {
     }
 });
 function mordalWindowShow(inside) {
+    mordal[0].style.display = 'block';
+    mordal[1].style.display = 'block';
     switch (inside) {
         case 'x-0y-0':
             mordal[1].innerHTML = mordalpage[0];
@@ -32,4 +36,8 @@ function mordalWindowShow(inside) {
 }
 function removeNowMordal() {
     mordal[0].classList.add('hideMD');
+    setTimeout(function () {
+        mordal[0].style.display = 'none';
+        mordal[1].style.display = 'none';
+    }, 500);
 }
